@@ -9,7 +9,7 @@ export default function Home() {
     <VStack minHeight="100vh" justifyContent="center" alignItems="center">
       <Box textAlign="center">
         <Heading as="h1" size="2xl">
-          Welcome to My Landing Page
+          Welcome to Make it Slick Landing Page
         </Heading>
         <Heading as="h2" size="lg" mt={6}>
           This is a Next.js, TypeScript, and Chakra UI project.
