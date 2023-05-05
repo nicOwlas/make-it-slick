@@ -1,6 +1,15 @@
 // pages/index.tsx
 
-import { Box, Button, Heading, VStack, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Stack,
+  Text,
+  VStack,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -8,16 +17,30 @@ export default function Home() {
   return (
     <VStack minHeight="100vh" justifyContent="center" alignItems="center">
       <Box textAlign="center">
-        <Heading as="h1" size="2xl">
-          Welcome to Make it Slick Landing Page
-        </Heading>
-        <Heading as="h2" size="lg" mt={6}>
-          This is a Next.js, TypeScript, and Chakra UI project.
-        </Heading>
+        <Stack spacing={6}>
+          <Heading as="h1" size="2xl">
+            We Provide You With<br></br>
+            The Right Tools For The Right Job
+          </Heading>
+          <Text fontSize="lg=" fontWeight={"medium"}>
+            Modern tools like Notion, Airtable, chatGPT, Zapier etc. allow to
+            boost your team productivity and focus your time where it matters
+            most.<br></br>
+            We help small to medium size teams identify the tools they need and
+            we assist in deploying them into your organization.
+          </Text>
+        </Stack>
       </Box>
-      <Button mt={12} colorScheme="blue" onClick={toggleColorMode}>
-        Toggle {colorMode === "light" ? "Dark" : "Light"} Mode
-      </Button>
+      <a target="_blank" href="https://google.com/" rel="noopener noreferrer">
+        <Button
+          mt={12}
+          bg={useColorModeValue("#F1D580", "#0987A0")}
+          color={useColorModeValue("black", "white")}
+          onClick={toggleColorMode}
+        >
+          Get Started
+        </Button>
+      </a>
     </VStack>
   );
 }
