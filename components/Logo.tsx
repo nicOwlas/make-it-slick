@@ -1,8 +1,10 @@
-import { HTMLChakraProps } from "@chakra-ui/react";
+import React from "react";
 
-export const Logo = (props: HTMLChakraProps<"svg">) => (
+interface LogoProps extends React.SVGProps<SVGSVGElement> {}
+
+export const Logo: React.FC<LogoProps> = (props) => (
   <svg
-    width={{ base: "auto", md: "150px" }}
+    width="150"
     height="35"
     viewBox="0 0 234 35"
     xmlns="http://www.w3.org/2000/svg"
