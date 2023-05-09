@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Flex,
   IconButton,
   Spacer,
@@ -8,7 +7,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { Logo } from "./Logo"; // Replace with the correct path to your Logo.tsx file
+import GetStartedButton from "./GetStartedButton";
+import { Logo } from "./Logo";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -32,22 +32,7 @@ const Navbar = () => {
           <Logo fill={logoColor} />
         </Box>
         <Spacer />
-        <a
-          target="_blank"
-          href="https://ol364r9x4kq.typeform.com/to/MnFcFpfA"
-          rel="noopener noreferrer"
-        >
-          <Button
-            variant="solid"
-            bg={useColorModeValue("#F1D580", "#0987A0")}
-            color={useColorModeValue("black", "white")}
-            // colorScheme={useColorModeValue("yellow", "teal")}
-            fontSize="20px"
-            _hover={{ textDecoration: "none" }}
-          >
-            Get Started
-          </Button>
-        </a>
+        <GetStartedButton isNavbar={true} url="https://example.com" />
         <IconButton
           variant="outline"
           aria-label="Toggle color mode"

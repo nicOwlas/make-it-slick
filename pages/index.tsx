@@ -2,21 +2,21 @@
 
 import {
   Box,
-  Button,
   Heading,
   Stack,
   Text,
   VStack,
   useColorMode,
-  useColorModeValue,
 } from "@chakra-ui/react";
+
+import GetStartedButton from "../components/GetStartedButton";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <VStack minHeight="100vh" justifyContent="center" alignItems="center">
-      <Box textAlign="center">
+      <Box textAlign="center" p={4}>
         <Stack spacing={6}>
           <Heading as="h1" size="2xl">
             We Provide You With<br></br>
@@ -31,16 +31,7 @@ export default function Home() {
           </Text>
         </Stack>
       </Box>
-      <a target="_blank" href="https://google.com/" rel="noopener noreferrer">
-        <Button
-          mt={12}
-          bg={useColorModeValue("#F1D580", "#0987A0")}
-          color={useColorModeValue("black", "white")}
-          onClick={toggleColorMode}
-        >
-          Get Started
-        </Button>
-      </a>
+      <GetStartedButton url="https://example.com" />
     </VStack>
   );
 }
