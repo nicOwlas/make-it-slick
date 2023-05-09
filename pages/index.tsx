@@ -34,7 +34,7 @@ export default function Home() {
           </Text>
         </Stack>
       </Box>
-      <GetStartedButton url="https://example.com" />
+      <GetStartedButton />
     </VStack>
   );
 }

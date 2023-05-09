@@ -33,7 +33,7 @@ const Navbar = () => {
           <Logo fill={logoColor} />
         </Box>
         <Spacer />
-        <GetStartedButton isNavbar={true} url="https://example.com" />
+        <GetStartedButton isNavbar={true} />
         <IconButton
           variant="outline"
           aria-label="Toggle color mode"

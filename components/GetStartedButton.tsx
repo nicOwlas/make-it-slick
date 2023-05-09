@@ -9,12 +9,12 @@ import React from "react";
 
 interface GetStartedButtonProps {
   isNavbar?: boolean;
-  url: string;
+  url?: string;
 }
 
 export const GetStartedButton: React.FC<GetStartedButtonProps> = ({
   isNavbar = false,
-  url,
+  url = "https://ol364r9x4kq.typeform.com/to/MnFcFpfA",
 }) => {
   const buttonSize = "md";
 
