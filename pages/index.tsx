@@ -25,7 +25,7 @@ export default function Home() {
     >
       <Box textAlign="center" p={4}>
         <Stack spacing={6}>
-          <Heading as="h1" size="2xl">
+          <Heading as="h1" size="2xl" fontWeight={"semibold"}>
             We Provide You With<br></br>
             The Right Tools For The Right Job
           </Heading>
