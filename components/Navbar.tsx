@@ -18,14 +18,15 @@ const Navbar = () => {
     <Box
       py={4}
       px={8}
-      bg="transparent"
       as="nav"
+      bg="transparent"
       position="fixed"
       top="0"
       left="0"
       right="0"
       zIndex="1000"
       width="100%"
+      style={{ backgroundColor: "transparent" }}
     >
       <Flex alignItems="center">
         <Box>

@@ -6,6 +6,7 @@ import {
   Stack,
   Text,
   VStack,
+  useBreakpointValue,
   useColorMode,
 } from "@chakra-ui/react";
 
@@ -13,9 +14,15 @@ import GetStartedButton from "../components/GetStartedButton";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const marginTop = useBreakpointValue({ base: "4rem", md: "0" });
 
   return (
-    <VStack minHeight="100vh" justifyContent="center" alignItems="center">
+    <VStack
+      minHeight="100vh"
+      justifyContent="center"
+      alignItems="center"
+      py={marginTop}
+    >
       <Box textAlign="center" p={4}>
         <Stack spacing={6}>
           <Heading as="h1" size="2xl">
@@ -25,9 +32,7 @@ export default function Home() {
           <Text fontSize="lg=" fontWeight={"medium"}>
             Modern tools like Notion, Airtable, chatGPT, Zapier etc. allow to
             boost your team productivity and focus your time where it matters
-            most.<br></br>
-            We help small to medium size teams identify the tools they need and
-            we assist in deploying them into your organization.
+            most.
           </Text>
         </Stack>
       </Box>
