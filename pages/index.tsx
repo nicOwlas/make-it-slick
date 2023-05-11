@@ -29,8 +29,8 @@ export default function Home() {
             Automate Your Business Processes
           </Heading>
           <Text fontSize="lg=" fontWeight={"medium"}>
-            We empower businesses to increase productivity by automating
-            repetitive tasks and processes using cutting-edge SaaS tools.
+            We empower businesses to boost productivity by automating repetitive
+            tasks and processes using cutting-edge SaaS tools.
           </Text>
         </Stack>
       </Box>
