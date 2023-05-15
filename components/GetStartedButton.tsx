@@ -5,16 +5,17 @@ import {
   useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import React from "react";
 
 interface GetStartedButtonProps {
   isNavbar?: boolean;
-  url?: string;
+  href?: string;
 }
 
 export const GetStartedButton: React.FC<GetStartedButtonProps> = ({
   isNavbar = false,
-  url = "https://ol364r9x4kq.typeform.com/to/MnFcFpfA",
+  href = "/sign-up",
 }) => {
   const buttonSize = "md";
 
@@ -23,29 +24,27 @@ export const GetStartedButton: React.FC<GetStartedButtonProps> = ({
   const bgColor = useColorModeValue("#F1D580", "#0987A0");
   const color = useColorModeValue("black", "white");
 
-  const handleClick = () => {
-    window.open(url, "_blank");
-  };
-
-  return displayIconButton && isNavbar ? (
-    <IconButton
-      aria-label="Get Started"
-      icon={<ArrowForwardIcon />}
-      size={buttonSize}
-      bg={bgColor}
-      color={color}
-      onClick={handleClick}
-    />
-  ) : (
-    <Button
-      size={buttonSize}
-      bg={bgColor}
-      color={color}
-      onClick={handleClick}
-      rightIcon={<ArrowForwardIcon />}
-    >
-      Get Started
-    </Button>
+  return (
+    <NextLink href={href} passHref>
+      {displayIconButton && isNavbar ? (
+        <IconButton
+          aria-label="Get Started"
+          icon={<ArrowForwardIcon />}
+          size={buttonSize}
+          bg={bgColor}
+          color={color}
+        />
+      ) : (
+        <Button
+          size={buttonSize}
+          bg={bgColor}
+          color={color}
+          rightIcon={<ArrowForwardIcon />}
+        >
+          Get Started
+        </Button>
+      )}
+    </NextLink>
   );
 };
 
