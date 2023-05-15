@@ -6,6 +6,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { FaMoon, FaSun } from "react-icons/fa";
 import GetStartedButton from "./GetStartedButton";
 import { Logo } from "./Logo";
@@ -30,7 +31,9 @@ const Navbar = () => {
     >
       <Flex alignItems="center">
         <Box>
-          <Logo fill={logoColor} />
+          <NextLink href="/" passHref>
+            <Logo fill={logoColor} style={{ cursor: "pointer" }} />
+          </NextLink>
         </Box>
         <Spacer />
         <GetStartedButton isNavbar={true} />
